@@ -1,0 +1,231 @@
+<html>
+  <div class="wrap">
+  <div class="container">
+    <div class="signUp-left">
+        <img class="signUpLogo" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/%E5%85%AC%E7%9B%8A%E9%AB%94%E9%A9%97%E7%87%9F-Todolist/logo_lg.png?raw=true" alt="Todolist_logo">
+      <img class="signUpMain" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/%E5%85%AC%E7%9B%8A%E9%AB%94%E9%A9%97%E7%87%9F-Todolist/img.png?raw=true
+" alt="Todolist_img">
+      </div>
+    <div class="signUp-right">
+
+      <div> <h2> Submint a request </h2> </div>
+      <div id="text">
+      <style>
+  #text {
+  font-size: 1vw;
+}
+  
+  </style>
+  <script>
+  
+var string = "Please fill out the form and we will contact you. Please fill in the correct data. Please write your type of service with an explanatory comment."; /* type your text here */
+var array = string.split("");
+var timer;
+
+function frameLooper () {
+	if (array.length > 0) {
+		document.getElementById("text").innerHTML += array.shift();
+	} else {
+		clearTimeout(timer);
+			}
+	loopTimer = setTimeout('frameLooper()',70); /* change 70 for speed */
+
+}
+frameLooper();
+  </script> 
+        </div>
+
+      <br>
+      <form action="submint">
+        <label for="mail">E-Mail</label>
+        <input type="text" name="mail" id="mail" value="Example@example.com">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" value="">    
+        <label for="control_phone">Phone Number</label>
+        <input type="text" name="control_phone" ID="control_phone" value="">    
+        <label for="passwordCheck">Service & Comment</label>
+        <input type="text" name="text" id="text" value="">
+        <input class="btm" type="submit" value="Submint">
+      </form>
+      <a class="login" href="#">Go To Whatssapp Chat</a>
+    </div>
+  </div>
+</div>
+  <style>
+    
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------reset edn---------*/
+input{
+  outline: none; /*清除input選擇時的外框線*/
+}
+
+body{
+  background-color: rgb(255,211,112);
+}
+.wrap{
+  max-width: 1028px;
+  height: 670px;
+  margin: auto;
+}
+.container{
+  width: 793px;
+  margin: auto;
+  margin-top: 81px;
+  display:flex;
+}
+
+.signUp-left{
+  margin-top: 30px;
+  margin-right: 103px;
+}
+
+.signUpLogo{
+  margin-left: 37px;
+  margin-bottom: 15px;
+} 
+
+.signUp-right{
+  height: 450px;
+  width: 304px;
+}
+
+.signUp-right h2{
+  font-family: "Noto Sans TC";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: 24px;
+}
+
+.signUp-right form{
+  font-family: "Noto Sans TC";
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-bottom: 24px;
+}
+
+.signUp-right label{
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 4px;
+} 
+
+.signUp-right input{
+  width: 304px;
+  height: 47px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  border:0px;
+  box-sizing: border-box;
+  border-radius:10px;
+  font-family: "Noto Sans TC";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #9F9A91;
+}
+
+.signUp-right .btm{
+  margin: 8px 0px 0px 72px;
+  padding: 0px 11px 0px 11px;
+  width: 160px;
+  height: 47px;
+  color: white;
+  font-size: 16px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login{
+  display: block;
+  color: black;
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: center;
+  text-decoration: none;
+}
+/* container設定為793px，實際拖拉寬度選擇850px為斷點，使用375的版型 */
+@media(max-width:850px){
+  .container{
+    width: 375px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .signUp-left{
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 14px;
+  }
+  .signUpLogo{
+    margin: auto;
+  }
+  .signUpMain{
+    display: none;
+  }  
+  .sighUP-right{
+    margin: auto;
+  }
+  .signUp-right h2{
+    padding-left: 99px;
+    margin-bottom: 26px;
+  }
+  .signUp-right .rwd-gap{
+    margin-bottom: 0px;    
+  } 
+  .signUp-right .btm{
+    margin-top: 12px;
+  }
+}
+  </style>
+  </html>
